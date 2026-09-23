@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Priority Schedule - SmartPlanner{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+
+    <p class="welcome">
+        TASK MANAGEMENT
+    </p>
+
+    <h1>
+        Priority Schedule
+    </h1>
+
+    <p class="subtitle">
+        Tasks arranged using priority scheduling.
+    </p>
+
+</header>
+
+
+<div class="panel large-panel">
+
+    <div class="panel-header">
+
+        <div>
+            <h2>Scheduled Tasks</h2>
+            <p>Highest priority tasks appear first.</p>
+        </div>
+
+    </div>
+
+
+    <div class="priority-row">
+
+        <div class="priority-number high-number">
+            1
+        </div>
+
+        <div class="priority-content">
+
+            <h3>
+                Complete DSA Assignment
+            </h3>
+
+            <p>
+                Task ID: 101 • Priority: High
+            </p>
+
+        </div>
+
+        <span class="priority high">
+            High
+        </span>
+
+    </div>
+
+
+    <div class="priority-row">
+
+        <div class="priority-number medium-number">
+            2
+        </div>
+
+        <div class="priority-content">
+
+            <h3>
+                Database Quiz Preparation
+            </h3>
+
+            <p>
+                Task ID: 102 • Priority: Medium
+            </p>
+
+        </div>
+
+        <span class="priority medium">
+            Medium
+        </span>
+
+    </div>
+
+
+    <div class="priority-row">
+
+        <div class="priority-number low-number">
+            3
+        </div>
+
+        <div class="priority-content">
+
+            <h3>
+                Review Python Notes
+            </h3>
+
+            <p>
+                Task ID: 103 • Priority: Low
+            </p>
+
+        </div>
+
+        <span class="priority low">
+            Low
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="info-grid">
+
+    <div class="info-card">
+
+        <h3>
+            DSA Used
+        </h3>
+
+        <p>
+            Priority Queue / Heap
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <h3>
+            Scheduling Rule
+        </h3>
+
+        <p>
+            High → Medium → Low
+        </p>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <h3>
+            Total Tasks
+        </h3>
+
+        <p>
+            12
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

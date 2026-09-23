@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}SmartPlanner{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                S
+            </div>
+
+            <div class="logo-text">
+                <h2>SmartPlanner</h2>
+                <span>Task & Route Planner</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+
+        <a href="/" class="menu {% if request.path == '/' %}active{% endif %}">
+            <span class="menu-icon">⌂</span>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a href="/" class="menu">
+            <span class="menu-icon">✓</span>
+            <span>Tasks</span>
+        </a>
+
+
+        <a href="/schedule"
+           class="menu {% if request.path == '/schedule' %}active{% endif %}">
+
+            <span class="menu-icon">⚡</span>
+            <span>Priority Schedule</span>
+
+        </a>
+
+
+        <a href="/dependencies"
+           class="menu {% if request.path == '/dependencies' %}active{% endif %}">
+
+            <span class="menu-icon">↔</span>
+            <span>Dependencies</span>
+
+        </a>
+
+
+        <a href="/routes"
+           class="menu {% if request.path == '/routes' %}active{% endif %}">
+
+            <span class="menu-icon">⌖</span>
+            <span>Route Planner</span>
+
+        </a>
+
+
+        <a href="/search"
+           class="menu {% if request.path == '/search' %}active{% endif %}">
+
+            <span class="menu-icon">⌕</span>
+            <span>Search</span>
+
+        </a>
+
+
+        <a href="/history"
+           class="menu {% if request.path == '/history' %}active{% endif %}">
+
+            <span class="menu-icon">↶</span>
+            <span>History</span>
+
+        </a>
+
+
+        <a href="/statistics"
+           class="menu {% if request.path == '/statistics' %}active{% endif %}">
+
+            <span class="menu-icon">▦</span>
+            <span>Statistics</span>
+
+        </a>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user-box">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div class="user-info">
+                    <strong>Alex</strong>
+                    <small>Student</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

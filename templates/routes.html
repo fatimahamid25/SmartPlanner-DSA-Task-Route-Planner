@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Route Planner - SmartPlanner{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+
+    <p class="welcome">
+        GRAPH ALGORITHM
+    </p>
+
+    <h1>
+        Route Planner
+    </h1>
+
+    <p class="subtitle">
+        Find the shortest path between locations.
+    </p>
+
+</header>
+
+
+<div class="panel route-panel">
+
+    <h2>
+        Find Shortest Route
+    </h2>
+
+    <p class="panel-description">
+        Enter two locations to calculate a route.
+    </p>
+
+
+    <div class="route-form">
+
+        <div>
+
+            <label>
+                START
+            </label>
+
+            <input
+                type="text"
+                placeholder="Enter starting location">
+
+        </div>
+
+
+        <div>
+
+            <label>
+                DESTINATION
+            </label>
+
+            <input
+                type="text"
+                placeholder="Enter destination">
+
+        </div>
+
+
+        <button class="route-btn">
+            Find Shortest Route
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="content-grid">
+
+
+    <div class="panel">
+
+        <h2>
+            Example Route
+        </h2>
+
+
+        <div class="route-result">
+
+            <div class="location">
+                Lahore
+            </div>
+
+            <span>
+                →
+            </span>
+
+            <div class="location">
+                Islamabad
+            </div>
+
+        </div>
+
+
+        <div class="distance">
+            Shortest distance: 375 km
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>
+            Algorithm
+        </h2>
+
+
+        <div class="algorithm-box">
+            Dijkstra's Algorithm
+        </div>
+
+
+        <p class="small-text">
+            Used to find the shortest path in a weighted graph.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

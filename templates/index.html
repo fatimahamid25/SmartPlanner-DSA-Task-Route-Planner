@@ -1,0 +1,436 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - SmartPlanner{% endblock %}
+
+{% block content %}
+
+<header class="topbar">
+
+    <div>
+
+        <p class="welcome">
+            Good morning, Alex 👋
+        </p>
+
+        <h1>
+            Dashboard
+        </h1>
+
+        <p class="subtitle">
+            Manage your tasks, priorities and routes in one place.
+        </p>
+
+    </div>
+
+
+    <button class="add-btn" onclick="openTask()">
+        + Add Task
+    </button>
+
+</header>
+
+
+<section class="stats">
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon purple">
+            ✓
+        </div>
+
+        <div>
+            <p>Total Tasks</p>
+            <h2>12</h2>
+            <span>All your tasks</span>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon orange">
+            !
+        </div>
+
+        <div>
+            <p>High Priority</p>
+            <h2>4</h2>
+            <span>Need attention</span>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon green">
+            ✓
+        </div>
+
+        <div>
+            <p>Completed</p>
+            <h2>7</h2>
+            <span>Tasks completed</span>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon blue">
+            ⌖
+        </div>
+
+        <div>
+            <p>Routes</p>
+            <h2>3</h2>
+            <span>Planned routes</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="content-grid">
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <div>
+                <h2>Today's Tasks</h2>
+                <p>Your upcoming tasks</p>
+            </div>
+
+            <a href="/" class="view-btn">
+                View All
+            </a>
+
+        </div>
+
+
+        <div class="task">
+
+            <div class="task-check"></div>
+
+            <div class="task-info">
+
+                <h3>
+                    Complete DSA Assignment
+                </h3>
+
+                <p>
+                    Today • 6:00 PM
+                </p>
+
+            </div>
+
+            <span class="priority high">
+                High
+            </span>
+
+        </div>
+
+
+        <div class="task">
+
+            <div class="task-check"></div>
+
+            <div class="task-info">
+
+                <h3>
+                    Database Quiz Preparation
+                </h3>
+
+                <p>
+                    Today • 8:00 PM
+                </p>
+
+            </div>
+
+            <span class="priority medium">
+                Medium
+            </span>
+
+        </div>
+
+
+        <div class="task completed-task">
+
+            <div class="task-check checked">
+                ✓
+            </div>
+
+            <div class="task-info">
+
+                <h3>
+                    Review Python Notes
+                </h3>
+
+                <p>
+                    Completed
+                </p>
+
+            </div>
+
+            <span class="priority low">
+                Low
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <div>
+                <h2>Priority Schedule</h2>
+                <p>Tasks ordered by priority</p>
+            </div>
+
+            <a href="/schedule" class="view-btn">
+                Open
+            </a>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+            <span class="number">
+                1
+            </span>
+
+            <div>
+
+                <h3>
+                    Complete DSA Assignment
+                </h3>
+
+                <p>
+                    Priority: High
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+            <span class="number">
+                2
+            </span>
+
+            <div>
+
+                <h3>
+                    Database Quiz Preparation
+                </h3>
+
+                <p>
+                    Priority: Medium
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+            <span class="number">
+                3
+            </span>
+
+            <div>
+
+                <h3>
+                    Review Python Notes
+                </h3>
+
+                <p>
+                    Priority: Low
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="bottom-grid">
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Route Planner
+                </h2>
+
+                <p>
+                    Find the shortest route between locations
+                </p>
+
+            </div>
+
+            <a href="/routes" class="view-btn">
+                Open
+            </a>
+
+        </div>
+
+
+        <div class="route-box">
+
+            <div class="route-input">
+
+                <label>
+                    START LOCATION
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter starting point">
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="route-input">
+
+                <label>
+                    DESTINATION
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter destination">
+
+            </div>
+
+
+            <a href="/routes" class="route-btn">
+                Find Route
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <p>
+                    Common actions
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-actions">
+
+            <button onclick="openTask()">
+                <span>＋</span>
+                Add Task
+            </button>
+
+            <a href="/schedule">
+                <span>⚡</span>
+                Schedule
+            </a>
+
+            <a href="/routes">
+                <span>⌖</span>
+                Plan Route
+            </a>
+
+            <a href="/search">
+                <span>⌕</span>
+                Search Tasks
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div id="taskModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Add New Task
+            </h2>
+
+            <button onclick="closeTask()">
+                ×
+            </button>
+
+        </div>
+
+
+        <input
+            type="text"
+            placeholder="Task name">
+
+
+        <select>
+
+            <option>
+                High Priority
+            </option>
+
+            <option>
+                Medium Priority
+            </option>
+
+            <option>
+                Low Priority
+            </option>
+
+        </select>
+
+
+        <button class="save-btn" onclick="closeTask()">
+            Save Task
+        </button>
+
+    </div>
+
+</div>
+
+{% endblock %}

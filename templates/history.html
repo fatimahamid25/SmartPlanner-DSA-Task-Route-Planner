@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}History - SmartPlanner{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+
+    <p class="welcome">
+        UNDO / REDO
+    </p>
+
+    <h1>
+        History
+    </h1>
+
+    <p class="subtitle">
+        View previous task operations.
+    </p>
+
+</header>
+
+
+<div class="panel">
+
+    <div class="history-buttons">
+
+        <button>
+            ↶ Undo
+        </button>
+
+        <button>
+            ↷ Redo
+        </button>
+
+    </div>
+
+
+    <div class="history-item">
+
+        <span class="history-icon">
+            +
+        </span>
+
+        <div>
+
+            <h3>
+                Task Added
+            </h3>
+
+            <p>
+                Complete DSA Assignment
+            </p>
+
+        </div>
+
+        <small>
+            2 min ago
+        </small>
+
+    </div>
+
+
+    <div class="history-item">
+
+        <span class="history-icon">
+            ✓
+        </span>
+
+        <div>
+
+            <h3>
+                Task Completed
+            </h3>
+
+            <p>
+                Review Python Notes
+            </p>
+
+        </div>
+
+        <small>
+            15 min ago
+        </small>
+
+    </div>
+
+
+    <div class="history-item">
+
+        <span class="history-icon">
+            ✎
+        </span>
+
+        <div>
+
+            <h3>
+                Task Updated
+            </h3>
+
+            <p>
+                Database Quiz Preparation
+            </p>
+
+        </div>
+
+        <small>
+            30 min ago
+        </small>
+
+    </div>
+
+</div>
+
+{% endblock %}

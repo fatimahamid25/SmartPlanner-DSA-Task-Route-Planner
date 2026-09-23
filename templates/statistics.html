@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+{% block title %}Statistics - SmartPlanner{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+
+    <p class="welcome">
+        PROJECT OVERVIEW
+    </p>
+
+    <h1>
+        Statistics
+    </h1>
+
+    <p class="subtitle">
+        Overview of your SmartPlanner data.
+    </p>
+
+</header>
+
+
+<section class="stats">
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon purple">
+            ✓
+        </div>
+
+        <div>
+
+            <p>
+                Total Tasks
+            </p>
+
+            <h2>
+                12
+            </h2>
+
+            <span>
+                All tasks
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon green">
+            ✓
+        </div>
+
+        <div>
+
+            <p>
+                Completed
+            </p>
+
+            <h2>
+                7
+            </h2>
+
+            <span>
+                58% completed
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon orange">
+            !
+        </div>
+
+        <div>
+
+            <p>
+                Pending
+            </p>
+
+            <h2>
+                5
+            </h2>
+
+            <span>
+                Need attention
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon blue">
+            ⌖
+        </div>
+
+        <div>
+
+            <p>
+                Routes
+            </p>
+
+            <h2>
+                3
+            </h2>
+
+            <span>
+                Planned routes
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="content-grid">
+
+
+    <div class="panel">
+
+        <h2>
+            Priority Distribution
+        </h2>
+
+
+        <div class="bar-item">
+
+            <div class="bar-label">
+                <span>High</span>
+                <strong>4</strong>
+            </div>
+
+            <div class="bar">
+                <div class="bar-fill high-fill"></div>
+            </div>
+
+        </div>
+
+
+        <div class="bar-item">
+
+            <div class="bar-label">
+                <span>Medium</span>
+                <strong>5</strong>
+            </div>
+
+            <div class="bar">
+                <div class="bar-fill medium-fill"></div>
+            </div>
+
+        </div>
+
+
+        <div class="bar-item">
+
+            <div class="bar-label">
+                <span>Low</span>
+                <strong>3</strong>
+            </div>
+
+            <div class="bar">
+                <div class="bar-fill low-fill"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>
+            DSA Components
+        </h2>
+
+
+        <div class="component-list">
+
+            <div>
+                <span>Hash Table</span>
+                <strong>Task Lookup</strong>
+            </div>
+
+            <div>
+                <span>Heap</span>
+                <strong>Priority Queue</strong>
+            </div>
+
+            <div>
+                <span>Stack</span>
+                <strong>Undo / Redo</strong>
+            </div>
+
+            <div>
+                <span>Graph</span>
+                <strong>Routes</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

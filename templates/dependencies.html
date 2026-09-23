@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Dependencies - SmartPlanner{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+
+    <p class="welcome">
+        TASK GRAPH
+    </p>
+
+    <h1>
+        Dependencies
+    </h1>
+
+    <p class="subtitle">
+        Manage relationships between tasks.
+    </p>
+
+</header>
+
+
+<div class="content-grid">
+
+
+    <div class="panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Task Dependencies
+                </h2>
+
+                <p>
+                    Tasks that depend on other tasks.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="dependency">
+
+            <div class="dependency-task">
+                Task 101
+            </div>
+
+            <span>→</span>
+
+            <div class="dependency-task">
+                Task 102
+            </div>
+
+        </div>
+
+
+        <div class="dependency">
+
+            <div class="dependency-task">
+                Task 102
+            </div>
+
+            <span>→</span>
+
+            <div class="dependency-task">
+                Task 103
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+
+        <h2>
+            Graph Information
+        </h2>
+
+
+        <div class="graph-info">
+
+            <div>
+                <span>Nodes</span>
+                <strong>3</strong>
+            </div>
+
+            <div>
+                <span>Edges</span>
+                <strong>2</strong>
+            </div>
+
+            <div>
+                <span>Graph Type</span>
+                <strong>Directed</strong>
+            </div>
+
+        </div>
+
+
+        <div class="status-box">
+            ✓ No cycle detected
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
