@@ -3,8 +3,8 @@ SmartPlanner: Task and Route Planner
 A Python app that organizes your tasks, schedules them by priority, and finds the best route between locations, built to show Data Structures and Algorithms solving a real everyday problem.
 
 App screenshot
+![Uploading image.png…]()
 
-<!-- Add a screenshot of the app and save it as screenshot.png in the repo -->
 The problem
 
 Planning a day means deciding what to do first and how to get between places efficiently. SmartPlanner handles both: it keeps your tasks organized, orders them sensibly, and works out an efficient route.
